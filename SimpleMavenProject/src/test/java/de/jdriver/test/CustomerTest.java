@@ -17,5 +17,25 @@ public class CustomerTest {
 		
 		assertEquals("firstNamelastName", c.getCustomerName());
 	}
+	
+	@Test
+	public void testCustomerNameFail() {
+		
+		Customer c = new Customer();
+		c.setFirstName("firstName");
+		c.setLastName("lastName");
+		
+		assertEquals("firstNamame", c.getCustomerName());
+	}
+	
+	@Test
+	public void testCustomerNameFail2() {
+		
+		Customer c = new Customer();
+		c.setFirstName("firstName");
+		c.setLastName("lastName");
+		
+		assertEquals("firstNamme", c.getCustomerName());
+	}
 
 }
